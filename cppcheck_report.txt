@@ -1,0 +1,695 @@
+lib/builtin.c:170:14: style: The scope of the variable 'cstr' can be reduced. [variableScope]
+ const char *cstr;
+             ^
+lib/os.c:331:7: style: Variable 'buf' is not assigned a value. [unassignedVariable]
+ char buf[26];
+      ^
+src/allocator.c:40:2: error: Memory leak: ptr [memleak]
+ return (void *)((char *)alignptr + ROUNDUP(sizeof(void *)));
+ ^
+src/allocator.c:62:2: error: Memory leak: ptr [memleak]
+ return (void *)((char *)alignptr + ROUNDUP(sizeof(void *)));
+ ^
+src/allocator.c:113:17: style: The scope of the variable 'pp' can be reduced. [variableScope]
+ struct mpool **pp;
+                ^
+src/allocator.c:183:17: style: The scope of the variable 'pp' can be reduced. [variableScope]
+ struct mpool **pp;
+                ^
+src/allocator.c:93:58: style:inconclusive: Function 'allocator_destroy' argument 2 names different: declaration 'mem' definition 'allocator'. [funcArgNamesDifferent]
+allocator_destroy(struct lemon *lemon, struct allocator *allocator)
+                                                         ^
+src/allocator.h:40:58: note: Function 'allocator_destroy' argument 2 names different: declaration 'mem' definition 'allocator'.
+allocator_destroy(struct lemon *lemon, struct allocator *mem);
+                                                         ^
+src/allocator.c:93:58: note: Function 'allocator_destroy' argument 2 names different: declaration 'mem' definition 'allocator'.
+allocator_destroy(struct lemon *lemon, struct allocator *allocator)
+                                                         ^
+src/collector.c:416:29: style: Condition 'collector->phase!=GC_SCAN_PHASE' is always true [knownConditionTrueFalse]
+  } while (collector->phase != GC_SCAN_PHASE);
+                            ^
+src/collector.c:413:23: note: Assuming that condition 'collector->phase!=GC_SCAN_PHASE' is not redundant
+ if (collector->phase != GC_SCAN_PHASE) {
+                      ^
+src/collector.c:416:29: note: Condition 'collector->phase!=GC_SCAN_PHASE' is always true
+  } while (collector->phase != GC_SCAN_PHASE);
+                            ^
+src/collector.c:212:12: style: The scope of the variable 'marked' can be reduced. [variableScope]
+ uintptr_t marked;
+           ^
+src/collector.c:434:7: style: The scope of the variable 'max' can be reduced. [variableScope]
+ long max;
+      ^
+src/compiler.c:600:26: style: The scope of the variable 'l_false' can be reduced. [variableScope]
+ struct generator_label *l_false;
+                         ^
+src/compiler.c:1370:26: style: The scope of the variable 'l_exit' can be reduced. [variableScope]
+ struct generator_label *l_exit;
+                         ^
+src/compiler.c:1649:17: style: The scope of the variable 'block_stmt' can be reduced. [variableScope]
+ struct syntax *block_stmt;
+                ^
+src/compiler.c:1724:17: style: The scope of the variable 'symbol' can be reduced. [variableScope]
+ struct symbol *symbol;
+                ^
+src/compiler.c:1831:7: style: The scope of the variable 'n' can be reduced. [variableScope]
+  int n;
+      ^
+src/compiler.c:1937:26: style: The scope of the variable 'l_catch_exit' can be reduced. [variableScope]
+ struct generator_label *l_catch_exit;
+                         ^
+src/compiler.c:2133:7: style: The scope of the variable 'n' can be reduced. [variableScope]
+  int n;
+      ^
+src/compiler.c:2398:7: style: The scope of the variable 'n' can be reduced. [variableScope]
+  int n;
+      ^
+src/extend.c:215:16: style: The scope of the variable 'carry' can be reduced. [variableScope]
+ unsigned long carry;
+               ^
+src/extend.c:336:16: style: The scope of the variable 'd' can be reduced. [variableScope]
+ unsigned long d;
+               ^
+src/larray.c:147:9: style: The scope of the variable 'size' can be reduced. [variableScope]
+ size_t size;
+        ^
+src/larray.c:250:7: style: The scope of the variable 'istart' can be reduced. [variableScope]
+ long istart;
+      ^
+src/larray.c:251:7: style: The scope of the variable 'istop' can be reduced. [variableScope]
+ long istop;
+      ^
+src/larray.c:252:7: style: The scope of the variable 'istep' can be reduced. [variableScope]
+ long istep;
+      ^
+src/larray.c:432:6: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int i;
+     ^
+src/larray.c:433:9: style: The scope of the variable 'size' can be reduced. [variableScope]
+ size_t size;
+        ^
+src/lclass.c:16:6: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int i;
+     ^
+src/lclass.c:17:7: style: The scope of the variable 'length' can be reduced. [variableScope]
+ long length;
+      ^
+src/lclass.c:18:17: style: The scope of the variable 'clazz' can be reduced. [variableScope]
+ struct lclass *clazz;
+                ^
+src/lclass.c:19:18: style: The scope of the variable 'base' can be reduced. [variableScope]
+ struct lobject *base;
+                 ^
+src/lclass.c:158:6: style: The scope of the variable 'finished' can be reduced. [variableScope]
+ int finished;
+     ^
+src/lclass.c:265:18: style: The scope of the variable 'base' can be reduced. [variableScope]
+ struct lobject *base;
+                 ^
+src/lclass.c:393:6: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int i;
+     ^
+src/lclass.c:395:18: style: The scope of the variable 'error' can be reduced. [variableScope]
+ struct lobject *error;
+                 ^
+src/lcontinuation.c:130:18: style: The scope of the variable 'function' can be reduced. [variableScope]
+ struct lobject *function;
+                 ^
+src/lcoroutine.c:83:9: style: The scope of the variable 'size' can be reduced. [variableScope]
+ size_t size;
+        ^
+src/lcoroutine.c:232:6: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int i;
+     ^
+src/lcoroutine.c:233:9: style: The scope of the variable 'size' can be reduced. [variableScope]
+ size_t size;
+        ^
+src/ldictionary.c:140:6: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int i;
+     ^
+src/ldictionary.c:170:17: style: The scope of the variable 'karg' can be reduced. [variableScope]
+  struct lkarg *karg;
+                ^
+src/lemon.c:473:9: style: The scope of the variable 'size' can be reduced. [variableScope]
+ size_t size;
+        ^
+src/lexception.c:31:14: style: The scope of the variable 'cstr' can be reduced. [variableScope]
+ const char *cstr;
+             ^
+src/lexception.c:32:17: style: The scope of the variable 'frame' can be reduced. [variableScope]
+ struct lframe *frame;
+                ^
+src/lexception.c:89:17: style: The scope of the variable 'clazz' can be reduced. [variableScope]
+ struct lclass *clazz;
+                ^
+src/lframe.c:46:18: style: The scope of the variable 'string' can be reduced. [variableScope]
+ struct lobject *string;
+                 ^
+src/lfunction.c:52:18: style: The scope of the variable 'exception' can be reduced. [variableScope]
+ struct lobject *exception;
+                 ^
+src/linstance.c:52:6: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int i;
+     ^
+src/linstance.c:53:7: style: The scope of the variable 'length' can be reduced. [variableScope]
+ long length;
+      ^
+src/linstance.c:55:17: style: The scope of the variable 'clazz' can be reduced. [variableScope]
+ struct lclass *clazz;
+                ^
+src/linstance.c:122:18: style: The scope of the variable 'self' can be reduced. [variableScope]
+ struct lobject *self;
+                 ^
+src/linstance.c:123:18: style: The scope of the variable 'name' can be reduced. [variableScope]
+ struct lobject *name;
+                 ^
+src/linteger.c:759:8: style: The scope of the variable 'p' can be reduced. [variableScope]
+ char *p;
+       ^
+src/linteger.c:760:6: style: The scope of the variable 'size' can be reduced. [variableScope]
+ int size;
+     ^
+src/linteger.c:761:19: style: The scope of the variable 'a' can be reduced. [variableScope]
+ struct linteger *a;
+                  ^
+src/linteger.c:952:12: style: The scope of the variable 'sign' can be reduced. [variableScope]
+ uintptr_t sign;
+           ^
+src/linteger.c:1033:19: style: The scope of the variable 'integer' can be reduced. [variableScope]
+ struct linteger *integer;
+                  ^
+src/linteger.c:950:55: style:inconclusive: Function 'linteger_to_long' argument 2 names different: declaration 'self' definition 'object'. [funcArgNamesDifferent]
+linteger_to_long(struct lemon *lemon, struct lobject *object)
+                                                      ^
+src/linteger.h:21:55: note: Function 'linteger_to_long' argument 2 names different: declaration 'self' definition 'object'.
+linteger_to_long(struct lemon *lemon, struct lobject *self);
+                                                      ^
+src/linteger.c:950:55: note: Function 'linteger_to_long' argument 2 names different: declaration 'self' definition 'object'.
+linteger_to_long(struct lemon *lemon, struct lobject *object)
+                                                      ^
+src/linteger.c:494:46: portability: Shifting signed 64-bit value by 63 bits is implementation-defined behaviour. See condition at line 490. [shiftTooManyBitsSigned]
+  return linteger_create_from_long(lemon, la << lb);
+                                             ^
+src/linteger.c:490:11: note: Assuming that condition 'lb>=(long)sizeof(la)*8' is not redundant
+  if ((lb >= (long)sizeof(la) * 8) || (la > (LONG_MAX >> lb))) {
+          ^
+src/linteger.c:494:46: note: Shift
+  return linteger_create_from_long(lemon, la << lb);
+                                             ^
+src/literator.c:206:57: style:inconclusive: Function 'literator_to_array' argument 2 names different: declaration 'iterator' definition 'iterable'. [funcArgNamesDifferent]
+literator_to_array(struct lemon *lemon, struct lobject *iterable, long max)
+                                                        ^
+src/literator.h:21:57: note: Function 'literator_to_array' argument 2 names different: declaration 'iterator' definition 'iterable'.
+literator_to_array(struct lemon *lemon, struct lobject *iterator, long max);
+                                                        ^
+src/literator.c:206:57: note: Function 'literator_to_array' argument 2 names different: declaration 'iterator' definition 'iterable'.
+literator_to_array(struct lemon *lemon, struct lobject *iterable, long max)
+                                                        ^
+src/lmodule.c:16:6: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int i;
+     ^
+src/lmodule.c:39:6: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int i;
+     ^
+src/lmodule.c:40:18: style: The scope of the variable 'local' can be reduced. [variableScope]
+ struct lobject *local;
+                 ^
+src/lobject.c:408:18: style: The scope of the variable 'object' can be reduced. [variableScope]
+ struct lobject *object;
+                 ^
+src/lobject.c:409:18: style: The scope of the variable 'string' can be reduced. [variableScope]
+ struct lobject *string;
+                 ^
+src/lobject.c:968:6: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int i;
+     ^
+src/lobject.c:969:17: style: The scope of the variable 'clazz' can be reduced. [variableScope]
+ struct lclass *clazz;
+                ^
+src/lobject.c:970:18: style: The scope of the variable 'item' can be reduced. [variableScope]
+ struct lobject *item;
+                 ^
+src/lobject.c:1010:18: style: The scope of the variable 'type' can be reduced. [variableScope]
+   struct ltype *type;
+                 ^
+src/lobject.c:32:54: style:inconclusive: Function 'lobject_destroy' argument 2 names different: declaration 'object' definition 'self'. [funcArgNamesDifferent]
+lobject_destroy(struct lemon *lemon, struct lobject *self)
+                                                     ^
+src/lobject.h:140:54: note: Function 'lobject_destroy' argument 2 names different: declaration 'object' definition 'self'.
+lobject_destroy(struct lemon *lemon, struct lobject *object);
+                                                     ^
+src/lobject.c:32:54: note: Function 'lobject_destroy' argument 2 names different: declaration 'object' definition 'self'.
+lobject_destroy(struct lemon *lemon, struct lobject *self)
+                                                     ^
+src/lobject.c:698:31: style:inconclusive: Function 'lobject_error' argument 2 names different: declaration 'self' definition 'base'. [funcArgNamesDifferent]
+              struct lobject *base,
+                              ^
+src/lobject.h:332:52: note: Function 'lobject_error' argument 2 names different: declaration 'self' definition 'base'.
+lobject_error(struct lemon *lemon, struct lobject *self, const char *fmt, ...);
+                                                   ^
+src/lobject.c:698:31: note: Function 'lobject_error' argument 2 names different: declaration 'self' definition 'base'.
+              struct lobject *base,
+                              ^
+src/lstring.c:189:6: style: Condition 'string' is always true [knownConditionTrueFalse]
+ if (string) {
+     ^
+src/lstring.c:163:6: note: Assuming that condition '!string' is not redundant
+ if (!string) {
+     ^
+src/lstring.c:189:6: note: Condition 'string' is always true
+ if (string) {
+     ^
+src/lstring.c:251:12: style: Condition 'argc!=1' is always false [knownConditionTrueFalse]
+  if (argc != 1 || !lobject_is_string(lemon, argv[0])) {
+           ^
+src/lstring.c:250:6: note: Assuming condition 'argc' is true
+ if (argc) {
+     ^
+src/lstring.c:251:12: note: Condition 'argc!=1' is always false
+  if (argc != 1 || !lobject_is_string(lemon, argv[0])) {
+           ^
+src/lstring.c:310:12: style: Condition 'argc!=1' is always false [knownConditionTrueFalse]
+  if (argc != 1 || !lobject_is_string(lemon, argv[0])) {
+           ^
+src/lstring.c:309:6: note: Assuming condition 'argc' is true
+ if (argc) {
+     ^
+src/lstring.c:310:12: note: Condition 'argc!=1' is always false
+  if (argc != 1 || !lobject_is_string(lemon, argv[0])) {
+           ^
+src/lstring.c:357:12: style: Condition 'argc!=1' is always false [knownConditionTrueFalse]
+  if (argc != 1 || !lobject_is_string(lemon, argv[0])) {
+           ^
+src/lstring.c:356:6: note: Assuming condition 'argc' is true
+ if (argc) {
+     ^
+src/lstring.c:357:12: note: Condition 'argc!=1' is always false
+  if (argc != 1 || !lobject_is_string(lemon, argv[0])) {
+           ^
+src/lstring.c:683:12: style: Condition 'argc==2' is always false [knownConditionTrueFalse]
+  if (argc == 2 && lobject_is_integer(lemon, argv[1])) {
+           ^
+src/lstring.c:675:6: note: Assuming condition 'argc' is true
+ if (argc && lobject_is_string(lemon, argv[0])) {
+     ^
+src/lstring.c:679:25: note: Assuming condition is false
+  if (substring->length == 0) {
+                        ^
+src/lstring.c:683:12: note: Condition 'argc==2' is always false
+  if (argc == 2 && lobject_is_integer(lemon, argv[1])) {
+           ^
+src/lstring.c:302:6: style: The scope of the variable 'c' can be reduced. [variableScope]
+ int c;
+     ^
+src/lstring.c:349:6: style: The scope of the variable 'c' can be reduced. [variableScope]
+ int c;
+     ^
+src/lstring.c:438:6: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int i;
+     ^
+src/lstring.c:439:6: style: The scope of the variable 'c' can be reduced. [variableScope]
+ int c;
+     ^
+src/lstring.c:440:7: style: The scope of the variable 'len' can be reduced. [variableScope]
+ long len;
+      ^
+src/lstring.c:483:6: style: The scope of the variable 'c' can be reduced. [variableScope]
+ int c;
+     ^
+src/lstring.c:484:7: style: The scope of the variable 'i' can be reduced. [variableScope]
+ long i;
+      ^
+src/lstring.c:485:7: style: The scope of the variable 'len' can be reduced. [variableScope]
+ long len;
+      ^
+src/lstring.c:528:6: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int i;
+     ^
+src/lstring.c:529:6: style: The scope of the variable 'j' can be reduced. [variableScope]
+ int j;
+     ^
+src/lstring.c:530:6: style: The scope of the variable 'c' can be reduced. [variableScope]
+ int c;
+     ^
+src/lstring.c:531:6: style: The scope of the variable 'r' can be reduced. [variableScope]
+ int r;
+     ^
+src/lstring.c:532:6: style: The scope of the variable 'o' can be reduced. [variableScope]
+ int o;
+     ^
+src/lstring.c:533:7: style: The scope of the variable 'len' can be reduced. [variableScope]
+ long len;
+      ^
+src/lstring.c:534:7: style: The scope of the variable 'diff' can be reduced. [variableScope]
+ long diff;
+      ^
+src/lstring.c:535:6: style: The scope of the variable 'count' can be reduced. [variableScope]
+ int count;
+     ^
+src/lstring.c:539:18: style: The scope of the variable 'newstring' can be reduced. [variableScope]
+ struct lstring *newstring;
+                 ^
+src/lstring.c:665:6: style: The scope of the variable 'c' can be reduced. [variableScope]
+ int c;
+     ^
+src/lstring.c:666:7: style: The scope of the variable 'i' can be reduced. [variableScope]
+ long i;
+      ^
+src/lstring.c:667:7: style: The scope of the variable 'j' can be reduced. [variableScope]
+ long j;
+      ^
+src/lstring.c:668:7: style: The scope of the variable 'max' can be reduced. [variableScope]
+ long max;
+      ^
+src/lstring.c:669:7: style: The scope of the variable 'len' can be reduced. [variableScope]
+ long len;
+      ^
+src/lstring.c:673:18: style: The scope of the variable 'array' can be reduced. [variableScope]
+ struct lobject *array;
+                 ^
+src/lstring.c:795:18: style: The scope of the variable 'string' can be reduced. [variableScope]
+ struct lstring *string;
+                 ^
+src/lstring.c:796:18: style: The scope of the variable 'substring' can be reduced. [variableScope]
+ struct lstring *substring;
+                 ^
+src/lstring.c:825:18: style: The scope of the variable 'string' can be reduced. [variableScope]
+ struct lstring *string;
+                 ^
+src/lstring.c:826:18: style: The scope of the variable 'substring' can be reduced. [variableScope]
+ struct lstring *substring;
+                 ^
+src/lstring.c:877:7: style: The scope of the variable 'i' can be reduced. [variableScope]
+ long i;
+      ^
+src/lstring.c:878:7: style: The scope of the variable 'buffer' can be reduced. [variableScope]
+ char buffer[1];
+      ^
+src/lstring.c:981:7: style: The scope of the variable 'off' can be reduced. [variableScope]
+ long off;
+      ^
+src/lsuper.c:17:6: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int i;
+     ^
+src/lsuper.c:21:18: style: The scope of the variable 'zuper' can be reduced. [variableScope]
+ struct lobject *zuper;
+                 ^
+src/lsuper.c:54:6: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int i;
+     ^
+src/lsuper.c:55:17: style: The scope of the variable 'clazz' can be reduced. [variableScope]
+ struct lclass *clazz;
+                ^
+src/ltable.c:156:6: style: The scope of the variable 'length' can be reduced. [variableScope]
+ int length;
+     ^
+src/ltable.c:157:9: style: The scope of the variable 'size' can be reduced. [variableScope]
+ size_t size;
+        ^
+src/ltable.c:460:9: style: The scope of the variable 'size' can be reduced. [variableScope]
+ size_t size;
+        ^
+src/machine.c:190:6: style: The scope of the variable 'value' can be reduced. [variableScope]
+ int value;
+     ^
+src/machine.c:470:17: style: The scope of the variable 'frame' can be reduced. [variableScope]
+ struct lframe *frame;
+                ^
+src/machine.c:648:18: style: The scope of the variable 'v_arg' can be reduced. [variableScope]
+ struct lobject *v_arg;
+                 ^
+src/machine.c:1169:6: style: The scope of the variable 'opcode' can be reduced. [variableScope]
+ int opcode;
+     ^
+src/machine.c:1456:9: style: The scope of the variable 'length' can be reduced. [variableScope]
+   long length;
+        ^
+src/machine.c:1864:19: style: The scope of the variable 'newframe' can be reduced. [variableScope]
+   struct lframe *newframe;
+                  ^
+src/machine.c:2060:6: style: The scope of the variable 'opcode' can be reduced. [variableScope]
+ int opcode;
+     ^
+src/machine.c:954:32: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+ lobject_print(lemon, exception, NULL);
+                               ^
+src/machine.c:1150:30: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+  lobject_print(lemon, object, NULL);
+                             ^
+src/machine.c:2190:42: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+   lobject_print(lemon, machine->cpool[a], NULL);
+                                         ^
+src/machine.c:121:58: style:inconclusive: Function 'machine_set_code1' argument 3 names different: declaration 'value' definition 'opcode'. [funcArgNamesDifferent]
+machine_set_code1(struct lemon *lemon, int location, int opcode)
+                                                         ^
+src/machine.h:53:58: note: Function 'machine_set_code1' argument 3 names different: declaration 'value' definition 'opcode'.
+machine_set_code1(struct lemon *lemon, int location, int value);
+                                                         ^
+src/machine.c:121:58: note: Function 'machine_set_code1' argument 3 names different: declaration 'value' definition 'opcode'.
+machine_set_code1(struct lemon *lemon, int location, int opcode)
+                                                         ^
+src/machine.c:916:52: style:inconclusive: Function 'machine_throw' argument 2 names different: declaration 'object' definition 'exception'. [funcArgNamesDifferent]
+machine_throw(struct lemon *lemon, struct lobject *exception)
+                                                   ^
+src/machine.h:101:31: note: Function 'machine_throw' argument 2 names different: declaration 'object' definition 'exception'.
+              struct lobject *object);
+                              ^
+src/machine.c:916:52: note: Function 'machine_throw' argument 2 names different: declaration 'object' definition 'exception'.
+machine_throw(struct lemon *lemon, struct lobject *exception)
+                                                   ^
+src/machine.c:971:58: style:inconclusive: Function 'lemon_machine_throw' argument 2 names different: declaration 'lobject' definition 'exception'. [funcArgNamesDifferent]
+lemon_machine_throw(struct lemon *lemon, struct lobject *exception)
+                                                         ^
+src/lemon.h:166:37: note: Function 'lemon_machine_throw' argument 2 names different: declaration 'lobject' definition 'exception'.
+                    struct lobject *lobject);
+                                    ^
+src/machine.c:971:58: note: Function 'lemon_machine_throw' argument 2 names different: declaration 'lobject' definition 'exception'.
+lemon_machine_throw(struct lemon *lemon, struct lobject *exception)
+                                                         ^
+src/mpool.c:68:8: style: The scope of the variable 'ptr' can be reduced. [variableScope]
+ void *ptr;
+       ^
+src/mpool.c:59:29: style:inconclusive: Function 'mpool_destroy' argument 1 names different: declaration 'pool' definition 'mpool'. [funcArgNamesDifferent]
+mpool_destroy(struct mpool *mpool)
+                            ^
+src/mpool.h:22:29: note: Function 'mpool_destroy' argument 1 names different: declaration 'pool' definition 'mpool'.
+mpool_destroy(struct mpool *pool);
+                            ^
+src/mpool.c:59:29: note: Function 'mpool_destroy' argument 1 names different: declaration 'pool' definition 'mpool'.
+mpool_destroy(struct mpool *mpool)
+                            ^
+src/mpool.c:66:27: style:inconclusive: Function 'mpool_alloc' argument 1 names different: declaration 'pool' definition 'mpool'. [funcArgNamesDifferent]
+mpool_alloc(struct mpool *mpool)
+                          ^
+src/mpool.h:25:27: note: Function 'mpool_alloc' argument 1 names different: declaration 'pool' definition 'mpool'.
+mpool_alloc(struct mpool *pool);
+                          ^
+src/mpool.c:66:27: note: Function 'mpool_alloc' argument 1 names different: declaration 'pool' definition 'mpool'.
+mpool_alloc(struct mpool *mpool)
+                          ^
+src/mpool.c:85:26: style:inconclusive: Function 'mpool_free' argument 1 names different: declaration 'pool' definition 'mpool'. [funcArgNamesDifferent]
+mpool_free(struct mpool *mpool, void *ptr)
+                         ^
+src/mpool.h:28:26: note: Function 'mpool_free' argument 1 names different: declaration 'pool' definition 'mpool'.
+mpool_free(struct mpool *pool, void *ptr);
+                         ^
+src/mpool.c:85:26: note: Function 'mpool_free' argument 1 names different: declaration 'pool' definition 'mpool'.
+mpool_free(struct mpool *mpool, void *ptr)
+                         ^
+src/parser.c:181:17: style: The scope of the variable 'name' can be reduced. [variableScope]
+ struct syntax *name;
+                ^
+src/parser.c:182:17: style: The scope of the variable 'value' can be reduced. [variableScope]
+ struct syntax *value;
+                ^
+src/parser.c:607:17: style: The scope of the variable 'right' can be reduced. [variableScope]
+ struct syntax *right;
+                ^
+src/parser.c:653:17: style: The scope of the variable 'right' can be reduced. [variableScope]
+ struct syntax *right;
+                ^
+src/parser.c:693:17: style: The scope of the variable 'right' can be reduced. [variableScope]
+ struct syntax *right;
+                ^
+src/parser.c:735:17: style: The scope of the variable 'right' can be reduced. [variableScope]
+ struct syntax *right;
+                ^
+src/parser.c:786:17: style: The scope of the variable 'right' can be reduced. [variableScope]
+ struct syntax *right;
+                ^
+src/parser.c:830:17: style: The scope of the variable 'right' can be reduced. [variableScope]
+ struct syntax *right;
+                ^
+src/parser.c:864:17: style: The scope of the variable 'right' can be reduced. [variableScope]
+ struct syntax *right;
+                ^
+src/parser.c:898:17: style: The scope of the variable 'right' can be reduced. [variableScope]
+ struct syntax *right;
+                ^
+src/parser.c:932:17: style: The scope of the variable 'right' can be reduced. [variableScope]
+ struct syntax *right;
+                ^
+src/parser.c:966:17: style: The scope of the variable 'right' can be reduced. [variableScope]
+ struct syntax *right;
+                ^
+src/parser.c:999:17: style: The scope of the variable 'true_expr' can be reduced. [variableScope]
+ struct syntax *true_expr;
+                ^
+src/parser.c:1000:17: style: The scope of the variable 'false_expr' can be reduced. [variableScope]
+ struct syntax *false_expr;
+                ^
+src/parser.c:1068:6: style: The scope of the variable 'opkind' can be reduced. [variableScope]
+ int opkind;
+     ^
+src/parser.c:1070:17: style: The scope of the variable 'right' can be reduced. [variableScope]
+ struct syntax *right;
+                ^
+src/parser.c:1213:17: style: The scope of the variable 'name' can be reduced. [variableScope]
+ struct syntax *name;
+                ^
+src/parser.c:1214:17: style: The scope of the variable 'expr' can be reduced. [variableScope]
+ struct syntax *expr;
+                ^
+src/parser.c:1215:17: style: The scope of the variable 'iter' can be reduced. [variableScope]
+ struct syntax *iter;
+                ^
+src/parser.c:1217:17: style: The scope of the variable 'cond_expr' can be reduced. [variableScope]
+ struct syntax *cond_expr;
+                ^
+src/parser.c:1218:17: style: The scope of the variable 'step_expr' can be reduced. [variableScope]
+ struct syntax *step_expr;
+                ^
+src/parser.c:1401:17: style: The scope of the variable 'sibling' can be reduced. [variableScope]
+ struct syntax *sibling;
+                ^
+src/parser.c:1705:17: style: The scope of the variable 'sibling' can be reduced. [variableScope]
+ struct syntax *sibling;
+                ^
+src/parser.c:1954:17: style: The scope of the variable 'accessor' can be reduced. [variableScope]
+ struct syntax *accessor;
+                ^
+src/parser.c:2002:17: style: The scope of the variable 'define_stmt' can be reduced. [variableScope]
+ struct syntax *define_stmt;
+                ^
+src/parser.c:2003:17: style: The scope of the variable 'class_stmt' can be reduced. [variableScope]
+ struct syntax *class_stmt;
+                ^
+src/peephole.c:314:18: style: The scope of the variable 'object' can be reduced. [variableScope]
+ struct lobject *object;
+                 ^
+src/peephole.c:364:18: style: The scope of the variable 'object' can be reduced. [variableScope]
+ struct lobject *object;
+                 ^
+src/peephole.c:414:18: style: The scope of the variable 'object' can be reduced. [variableScope]
+ struct lobject *object;
+                 ^
+src/shell.c:166:6: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int i;
+     ^
+src/syntax.c:265:38: style:inconclusive: Function 'syntax_make_call_node' argument 2 names different: declaration 'function' definition 'callable'. [funcArgNamesDifferent]
+                      struct syntax *callable,
+                                     ^
+src/syntax.h:429:38: note: Function 'syntax_make_call_node' argument 2 names different: declaration 'function' definition 'callable'.
+                      struct syntax *function,
+                                     ^
+src/syntax.c:265:38: note: Function 'syntax_make_call_node' argument 2 names different: declaration 'function' definition 'callable'.
+                      struct syntax *callable,
+                                     ^
+src/syntax.c:387:40: style:inconclusive: Function 'syntax_make_delete_node' argument 2 names different: declaration 'left' definition 'expr'. [funcArgNamesDifferent]
+                        struct syntax *expr)
+                                       ^
+src/syntax.h:519:40: note: Function 'syntax_make_delete_node' argument 2 names different: declaration 'left' definition 'expr'.
+                        struct syntax *left);
+                                       ^
+src/syntax.c:387:40: note: Function 'syntax_make_delete_node' argument 2 names different: declaration 'left' definition 'expr'.
+                        struct syntax *expr)
+                                       ^
+src/syntax.c:399:40: style:inconclusive: Function 'syntax_make_return_node' argument 2 names different: declaration 'left' definition 'expr'. [funcArgNamesDifferent]
+                        struct syntax *expr)
+                                       ^
+src/syntax.h:523:40: note: Function 'syntax_make_return_node' argument 2 names different: declaration 'left' definition 'expr'.
+                        struct syntax *left);
+                                       ^
+src/syntax.c:399:40: note: Function 'syntax_make_return_node' argument 2 names different: declaration 'left' definition 'expr'.
+                        struct syntax *expr)
+                                       ^
+src/syntax.c:425:37: style:inconclusive: Function 'syntax_make_var_node' argument 2 names different: declaration 'left' definition 'name'. [funcArgNamesDifferent]
+                     struct syntax *name,
+                                    ^
+src/syntax.h:474:37: note: Function 'syntax_make_var_node' argument 2 names different: declaration 'left' definition 'name'.
+                     struct syntax *left,
+                                    ^
+src/syntax.c:425:37: note: Function 'syntax_make_var_node' argument 2 names different: declaration 'left' definition 'name'.
+                     struct syntax *name,
+                                    ^
+src/syntax.c:426:37: style:inconclusive: Function 'syntax_make_var_node' argument 3 names different: declaration 'right' definition 'expr'. [funcArgNamesDifferent]
+                     struct syntax *expr)
+                                    ^
+src/syntax.h:475:37: note: Function 'syntax_make_var_node' argument 3 names different: declaration 'right' definition 'expr'.
+                     struct syntax *right);
+                                    ^
+src/syntax.c:426:37: note: Function 'syntax_make_var_node' argument 3 names different: declaration 'right' definition 'expr'.
+                     struct syntax *expr)
+                                    ^
+src/syntax.c:547:39: style:inconclusive: Function 'syntax_make_block_node' argument 2 names different: declaration 'child' definition 'stmt_list'. [funcArgNamesDifferent]
+                       struct syntax *stmt_list)
+                                      ^
+src/syntax.h:538:39: note: Function 'syntax_make_block_node' argument 2 names different: declaration 'child' definition 'stmt_list'.
+                       struct syntax *child);
+                                      ^
+src/syntax.c:547:39: note: Function 'syntax_make_block_node' argument 2 names different: declaration 'child' definition 'stmt_list'.
+                       struct syntax *stmt_list)
+                                      ^
+src/syntax.c:579:40: style:inconclusive: Function 'syntax_make_module_node' argument 2 names different: declaration 'child' definition 'stmt_list'. [funcArgNamesDifferent]
+                        struct syntax *stmt_list)
+                                       ^
+src/syntax.h:542:40: note: Function 'syntax_make_module_node' argument 2 names different: declaration 'child' definition 'stmt_list'.
+                        struct syntax *child);
+                                       ^
+src/syntax.c:579:40: note: Function 'syntax_make_module_node' argument 2 names different: declaration 'child' definition 'stmt_list'.
+                        struct syntax *stmt_list)
+                                       ^
+src/extend.c:333:0: style: The function 'extend_diff' is never used. [unusedFunction]
+
+^
+src/generator.c:126:0: style: The function 'generator_insert_code' is never used. [unusedFunction]
+
+^
+src/collector.c:158:0: style: The function 'lemon_collector_disable' is never used. [unusedFunction]
+
+^
+src/collector.c:167:0: style: The function 'lemon_collector_enabled' is never used. [unusedFunction]
+
+^
+src/collector.c:210:0: style: The function 'lemon_collector_untrace' is never used. [unusedFunction]
+
+^
+src/input.c:92:0: style: The function 'lemon_input_set_buffer' is never used. [unusedFunction]
+
+^
+src/machine.c:861:0: style: The function 'lemon_machine_add_pause' is never used. [unusedFunction]
+
+^
+src/machine.c:910:0: style: The function 'lemon_machine_del_pause' is never used. [unusedFunction]
+
+^
+src/machine.c:986:0: style: The function 'lemon_machine_halted' is never used. [unusedFunction]
+
+^
+src/machine.c:570:0: style: The function 'lemon_machine_peek_frame' is never used. [unusedFunction]
+
+^
+src/machine.c:971:0: style: The function 'lemon_machine_throw' is never used. [unusedFunction]
+
+^
+src/lobject.c:218:0: style: The function 'lobject_add_attr' is never used. [unusedFunction]
+
+^
+src/lobject.c:133:0: style: The function 'lobject_all_item' is never used. [unusedFunction]
+
+^
+src/opcode.c:5:0: style: The function 'opcode_to_method' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
